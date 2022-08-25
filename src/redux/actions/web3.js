@@ -11,7 +11,7 @@ import {
 } from "./types";
 
 import { ethers } from "ethers";
-
+import {create_user,get_my_user_details}  from "redux/actions/user";
 
 
 export const loadWeb3 = () => async (dispatch) => {
@@ -65,8 +65,8 @@ export const loginWeb3 = () => async (dispatch) => {
     });
 
     // CREAR USUARIO DE DJANGO
-  // await dispatch(create_user());
-   // await dispatch(get_my_user_details());
+   await dispatch(create_user());
+   await dispatch(get_my_user_details());
 
     await dispatch({
       type: SET_LOADING,

@@ -8,11 +8,11 @@ function Alert({ alert }) {
       return (
         <div className="fixed z-50 bottom-0 inst-x-0 pb-2 sm:pb-5">
           <div className="max-w-7xl mx-auto px-w sm:px-6 lg:px-8">
-            <div className="{`p-2 rounded-lg bg-${alert.alertType}-600 shadow-lg sm:p-3`}">
+            <div className="{`p-2 rounded-lg bg-green-600 shadow-lg sm:p-3`}">
               <div className="flex items-center justify-between flex-wrap">
                 <div className="w-0 flex-1 flex items-center">
                   <span
-                    className={`flex p-2 rounded-lg bg-${alert.alertType}-600`}>
+                    className={`flex p-2 rounded-lg bg-green-600`}>
                     <SpeakerphoneIcon
                       className="h-6 w-6 text-white"
                       aria-hidden="true"
@@ -20,7 +20,7 @@ function Alert({ alert }) {
                   </span>
                   <p className="ml-3 font-medium text-white">
                     <span className="md:hidden text-white">{alert.msg}</span>
-                    <span className="hidden md:inline text-white">
+                    <span className="hidden md:inline text-green-600">
                       {alert.msg}
                     </span>
                   </p>

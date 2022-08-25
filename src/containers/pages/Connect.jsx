@@ -10,8 +10,8 @@ import {
 import { Navigate } from "react-router-dom";
 import { loginWeb3 } from "redux/actions/web3";
 
-function Connect({ loading, loginWeb3,account }) {
-  if (account) {
+function Connect({ loading, loginWeb3,account, my_user }) {
+  if (my_user) {
     return <Navigate to='/' />
   }
   return (
@@ -79,7 +79,8 @@ function Connect({ loading, loginWeb3,account }) {
 
 const mapStateToProps = (state) => ({
  loading: state.web3.loading,
- account: state.web3.account 
+  account: state.web3.account,
+  my_user: state.web3.my_user
 });
 
 export default connect(mapStateToProps, {
