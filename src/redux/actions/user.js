@@ -57,7 +57,7 @@ export const create_user = () => async dispatch => {
 }
 
 export const get_user_details = (account) => async dispatch => {
-   
+    
         const config = {
             headers: {
                 "Accept": "application/json",

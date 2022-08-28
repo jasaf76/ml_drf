@@ -27,7 +27,7 @@ def user_banner_directory_path(instance, filename):
 
 class UserAccount(models.Model):
     account = models.CharField(max_length=255, unique=True)
-
+    
     username = models.CharField(max_length=255)
     email = models.EmailField(max_length=255)
     first_name = models.CharField(max_length=255)

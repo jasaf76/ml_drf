@@ -1,3 +1,4 @@
+import LoadingFullWidth from "components/loaders/LoadingFullWidth"
 import { useEffect } from "react"
 import { connect } from "react-redux"
 import { Link } from "react-router-dom"

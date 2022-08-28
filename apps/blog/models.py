@@ -20,7 +20,7 @@ class Post(models.Model):
         ('draft', 'Draft'),
         ('published', 'Published'),
     )
-
+    
     blog_uuid =         models.UUIDField(default=uuid.uuid4, unique=True)
     title =             models.CharField(max_length=255)
     slug =              models.SlugField(unique=True)
@@ -29,7 +29,7 @@ class Post(models.Model):
     description =       models.TextField()
     excerpt =           models.CharField(max_length=100)
 
-    # author =            models.CharField(max_length=255)
+    author =            models.CharField(max_length=255, default='keine')
     category =          models.ForeignKey(Category, on_delete=models.PROTECT)
 
     published =         models.DateTimeField(default=timezone.now)

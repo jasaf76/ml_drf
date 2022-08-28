@@ -1,18 +1,17 @@
 import FullWidthLayout from "hocs/layouts/FullWidthLayout";
-import LoadingFullWidth from "components/loaders/LoadingFullWidth";
 import { connect } from "react-redux";
 import {
   ChevronRightIcon,
   ChevronDownIcon,
   MailIcon,
 } from "@heroicons/react/solid";
-
+import LoadingFullWidth from "components/loaders/LoadingFullWidth";
 import { Navigate } from "react-router-dom";
 import { loginWeb3 } from "redux/actions/web3";
 
-function Connect({ loading, loginWeb3,account, my_user }) {
+function Connect({ loading, loginWeb3, account, my_user }) {
   if (my_user) {
-    return <Navigate to='/' />
+    return <Navigate to="/" />;
   }
   return (
     <FullWidthLayout>
@@ -78,11 +77,11 @@ function Connect({ loading, loginWeb3,account, my_user }) {
 }
 
 const mapStateToProps = (state) => ({
- loading: state.web3.loading,
+  loading: state.web3.loading,
   account: state.web3.account,
-  my_user: state.web3.my_user
+  my_user: state.user.my_user,
 });
 
 export default connect(mapStateToProps, {
-loginWeb3
+  loginWeb3,
 })(Connect);
