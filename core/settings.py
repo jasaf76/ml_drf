@@ -56,14 +56,15 @@ DJANGO_APPS = [
 PROJECT_APPS = [
     'apps.user',
     'apps.blog',
-    'apps.category'
+    'apps.category',
+    'apps.ml',
 ]
 THIRD_PARTY_APPS = [
     'rest_framework',
     'corsheaders',
     'ckeditor',
     'ckeditor_uploader',
-
+    'import_export',
 ]
 
 

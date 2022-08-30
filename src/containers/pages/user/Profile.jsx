@@ -133,7 +133,12 @@ function Profile({ get_user_details, user, setAlert }) {
             </div>
 
             <div className="mt-8 dark:text-dark-txt text-gray-700 font-gilroy-regular">
-              {user && user.profile_info} {user && user.first_name}
+              {user && user.profile_info}{" "}
+              <PhoneIcon
+                className="ml-2 h-6 w-6 text-blue-500 inline-flex"
+                aria-hidden="true"
+              />
+              {user && user.first_name}
             </div>
 
             <div className="hidden sm:block md:hidden mt-6 min-w-0 flex-1">

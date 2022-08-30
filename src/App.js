@@ -11,6 +11,7 @@ import Search from "containers/pages/Search";
 import BlogCategory from "containers/pages/blog/category/BlogCategory";
 import BlogPost from "containers/pages/blog/BlogPost";
 import Blog from "containers/pages/blog/Blog";
+import RegresionLineal from "containers/pages/ml/RegresionLineal";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/connect" element={<Connect />} />
           <Route path="/perfil/:user_account" element={<Profile />} />
-          
+
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/post/:slug" element={<BlogPost />} />
           <Route
@@ -32,6 +33,9 @@ function App() {
           />
 
           <Route path="/search/:term" element={<Search />} />
+
+          <Route path="/ml/regresion_lineal" element={<RegresionLineal />} />
+          
         </Routes>
       </Router>
     </Provider>

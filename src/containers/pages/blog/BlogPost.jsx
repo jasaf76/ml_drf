@@ -119,25 +119,25 @@ function BlogPost({
             <div className="relative px-4 sm:px-6 lg:px-8">
               <div className="text-lg max-w-prose mx-auto">
                 <h1>
-                  <span className="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase">
+                  <span className="block text-base text-center text-indigo-600 font-gilroy-semibold tracking-wide uppercase">
                     {post.category.name}
                   </span>
-                  <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                  <span className="mt-2 block text-3xl text-center leading-8 font-gilroy-black tracking-tight text-gray-900 sm:text-4xl">
                     {post.title}
                   </span>
                 </h1>
-                <p className="mt-8 text-xl text-gray-500 leading-8">
+                <p className="mt-8 text-xl text-gray-500 leading-8 font-gilroy-medium">
                   {post.excerpt}
                 </p>
               </div>
-              <div className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
+              <div className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto font-gilroy-heavy">
                 <p>{post.description}</p>
               </div>
               <video
                 controls
                 width="640"
                 height="360"
-                style={{ align: "center" }}>
+                className="mt-6 mx-auto">
                 <source
                   src={`${process.env.REACT_APP_API_URL}${post.video}`}
                   type="video/mp4"

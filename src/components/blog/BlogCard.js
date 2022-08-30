@@ -32,7 +32,7 @@ function BlogCard(data) {
                         ? " bg-green-100 text-green-700"
                         : post.category.name === "Deep Learning"
                         ? "bg-rose-100 text-rose-700"
-                        : post.category.name === "Inteligencia Artificial"
+                        : post.category.name === "Küntliche Intelligenz"
                         ? "bg-blue-100 text-blue-700"
                         : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                     } 
